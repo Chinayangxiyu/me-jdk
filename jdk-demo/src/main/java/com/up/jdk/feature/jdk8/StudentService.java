@@ -5,6 +5,7 @@ import com.up.jdk.feature.base.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,12 +30,26 @@ public class StudentService {
         students.stream().map(Student::getScores).flatMap(List::stream).collect(Collectors.toList());
         students.stream().map(Student::getScores);
         List<Student> newStudents = new ArrayList<>();
-        students.stream().reduce(new Student("default", 0, 0,null), (p1, p2) -> {
+        students.stream().reduce(new Student("default", 0, 0, Collections.EMPTY_LIST), (p1, p2) -> {
             if(p1.getAge() > p2.getAge()){
                 return p1;
             }
-            return null;
+            return p2;
         });
+
+        Student result = students.stream().reduce(new Student(), (a, b) ->  {
+            int sum = a.getAge() + b.getAge();
+            b.setAge(sum);
+            return b;
+        });
+
+        System.out.println("==================");
+        System.out.println(result.getAge());
+
+        List<Integer> list = new ArrayList<>();
+
+
+
         List<Person> names = students.stream().peek(s ->{
             s.setAge(18);
         }).collect(Collectors.toList());
