@@ -1,11 +1,11 @@
-package com.up.jdk.juc;
+package com.up.xianliu;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 实现滑动窗口算法
+ * 基于环链实现滑动窗口算法【时间轮】
  */
 public class SlidingWindow {
 
@@ -59,18 +59,14 @@ public class SlidingWindow {
         // 等待限流开启
         Thread.sleep(100);
 
-
-
         for(int i = 0; i < 10; i++){
 
             // 模拟请求线程
             try {
                 Thread.sleep(20L);
-
             }catch (Exception e){
                 e.printStackTrace();
             }
-
 
             Thread t = new Thread(() -> {
 
@@ -80,9 +76,7 @@ public class SlidingWindow {
             t.start();
         }
 
-
         Thread.sleep(1000000L);
-
     }
 
 
@@ -148,16 +142,9 @@ public class SlidingWindow {
 
         return true;
 
-
-
     }
 
 }
-
-
-
-
-
 
 
 

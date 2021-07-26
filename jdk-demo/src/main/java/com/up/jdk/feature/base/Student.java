@@ -12,6 +12,10 @@ public class Student extends Person {
     private List<Double> scores;
 
 
+    public Student(String name, int age, int gender) {
+        super(name, age, gender);
+    }
+
     public Student(String name, int age, int gender, List<Double> scores) {
         super(name, age, gender);
         this.scores = scores;

@@ -50,6 +50,7 @@ AutowiredAnnotationBeanPostProcessor相比除了装配bean，还实现了bean的init和destro
 （1）、反射获取当前bean的添加了注解（@AutoWired、@Resource)的字段和方法；构建自动装配需要的元信息（InjectionMetadata）。
 （2）、查找需要装配的bean：InjectionMetadata.inject()方法中根据步骤1"元信息"，去beanFactory中查找对应的bean。
 （3）、执行绑定：调用反射方法，将查到的bean和当前对象绑定。
+（4）\ Autowired annotation is not supported on static fields
 
 InstantiationAwareBeanPostProcessor接口的postProcessProperties()方法是将bean绑定对应的属性之前做的处理；
 AutowiredAnnotationBeanPostProcessor和CommonAnnotationBeanPostProcessor都实现了该接口；作用就是执行我们上述的自动装配。

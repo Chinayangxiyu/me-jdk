@@ -78,6 +78,8 @@ DestructionAwareBeanPostProcessor：扩展了销毁前的回调处理
 （10）销毁：bean被销毁，比如resetBeanDefinition，重置BeanDefinition，提供扩展入口。
 
 
+zongjie:applyBeanPostProcessorsBeforeInitialization
+
 # 三、bean创建流程
 概述：流程主要以单例bean、字段注入类型进行说明  
 bean创建的核心方法是AbstractAutowireCapableBeanFactory.doCreateBean()。  

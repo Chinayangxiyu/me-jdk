@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author yxy test  mixd
+ * @author yxy 111111111111
  * @date 2020/4/22 12:00it
  * @description
  */
@@ -37,7 +37,7 @@ public class StudentService {
             return p2;
         });
 
-        Student result = students.stream().reduce(new Student(), (a, b) ->  {
+        Student result = students.stream().reduce(new Student("", 1,2), (a, b) ->  {
             int sum = a.getAge() + b.getAge();
             b.setAge(sum);
             return b;
