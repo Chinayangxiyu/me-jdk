@@ -16,10 +16,10 @@ target/
 ### IntelliJ IDEA ###
 /.idea/
 .idea/
-*.idea
 *.iws
 *.iml
 *.ipr
+.libraries/
 
 ### NetBeans ###
 /nbproject/private/

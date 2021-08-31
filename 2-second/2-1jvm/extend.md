@@ -26,7 +26,13 @@ Javabeans规范；
 ## 栗子
 JDBC标准服务使用了SPI机制;  
 SpringBoot的模块化扩展机制也是一种SPI思想的，添加新的模块时，在jar包META-INF路径添加spring.factories文件，文件中包含有  
-需要被加载的类全限定类名称。
+需要被加载的类全限定类名称;
+dubbo的SPI。
+
+## SPI和API差异
+API是给的接口具体实现，可以直接使用。
+SPI是给的接口规范，需要使用方自己实现。
+
 
 
 # 3、JDNI(java Naming and Directory Interface):

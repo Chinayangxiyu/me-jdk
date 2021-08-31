@@ -204,13 +204,13 @@ Executors£º´´½¨Ïß³Ì³ØµÄ¹¤³§Àà¡£
 jdk1.8¶ÔFutureµÄÀ©Õ¹£¬ÔöÇ¿ÁËÒì²½»Øµ÷¡¢Á÷Ê½´¦Àí¡¢¶à¸öFuture×éºÏ´¦ÀíµÄÄÜÁ¦£»Ê¹µÃJava¶àÈÎÎñµÄĞ­µ÷´¦Àí¸ü¼ÓÁ÷³©¡£  
 ÃèÊö£ºÒ»°ãÊ¹ÓÃCompletableFutureµÄ¾²Ì¬·½·¨»ñÈ¡ÊµÀı£¬
 
-### Ìá½»ÈÎÎñµÄ·½·¨£¨¾²Ì¬·½·¨£©
+### £¨1£©Ìá½»ÈÎÎñµÄ·½·¨£¨¾²Ì¬·½·¨£©
 CompletableFuture.runAsync(Runnable runnable):ÎŞ·µ»ØÖµÈÎÎñÌá½»£¬Ê¹ÓÃÄ¬ÈÏÏß³Ì³ØForkJoinPool¡£  
 CompletableFuture.runAsync(Runnable runnabl, Executor executor):ÎŞ·µ»ØÖµÈÎÎñÌá½»£¬Ê¹ÓÃ´«ÈëµÄÏß³Ì³ØÖ´ĞĞ¡£  
 CompletableFuture.supplyAsync(Supplier<U> supplier):ÓĞ·µ»ØÖµÈÎÎñÌá½»£¬Ê¹ÓÃÄ¬ÈÏÏß³Ì³ØForkJoinPool¡£  
 CompletableFuture.supplyAsync(Supplier<U> supplier, Executor executor):ÓĞ·µ»ØÖµÈÎÎñÌá½»£¬Ê¹ÓÃ´«ÈëµÄÏß³Ì³Ø¡£
 
-### ÊµÀı·½·¨¾ÙÀı£¨Òì²½»Øµ÷¡¢Á÷Ê½´¦Àí£©
+### £¨2£©ÊµÀı·½·¨¾ÙÀı£¨Òì²½»Øµ÷¡¢Á÷Ê½´¦Àí£©
 £¨1£©Òì²½»Øµ÷£ºÏà±ÈFutureµÄÒì²½»Øµ÷¿ª·¢¸ü¼òµ¥Ò×¶®
 ```
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
@@ -256,7 +256,7 @@ CompletableFuture.supplyAsync(Supplier<U> supplier, Executor executor):ÓĞ·µ»ØÖµÈ
 (²Î¿¼1)\[https://blog.csdn.net/qq_31865983/article/details/106137777]  
 (²Î¿¼2)\[https://www.jianshu.com/p/558b090ae4bb?from=timeline]
 
-
+### £¨3£©²Ù×÷·½·¨
 
 # ËÄ¡¢atomic
 

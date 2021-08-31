@@ -1,19 +1,12 @@
 package com.up.jdk.io;
 
 
-import sun.nio.cs.ext.GBK;
-
-import java.io.*;
-import java.net.SocketAddress;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.PipedInputStream;
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.channels.Channel;
 import java.nio.channels.FileChannel;
-import java.nio.channels.Selector;
-import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
-
-import static java.nio.charset.StandardCharsets.UTF_8;
 
 /**
  * @author yxy

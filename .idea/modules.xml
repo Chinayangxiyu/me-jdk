@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/1-first/1-first.iml" filepath="$PROJECT_DIR$/1-first/1-first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2-second/2-second.iml" filepath="$PROJECT_DIR$/2-second/2-second.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-extend/3-extend.iml" filepath="$PROJECT_DIR$/3-extend/3-extend.iml" />
       <module fileurl="file://$PROJECT_DIR$/arithmetic-study/arithmetic-study.iml" filepath="$PROJECT_DIR$/arithmetic-study/arithmetic-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk-demo/jdk-demo.iml" filepath="$PROJECT_DIR$/jdk-demo/jdk-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/me-up.iml" filepath="$PROJECT_DIR$/.idea/me-up.iml" />
     </modules>
   </component>

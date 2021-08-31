@@ -26,6 +26,16 @@ public class CompletableFutureDemo {
 
     }
 
+    private void pipelineTest(){
+        CompletableFuture.supplyAsync(() -> {
+            System.out.println("-------supplyAsync");
+            return 100;
+        }).whenComplete((r, t) ->{
+
+
+        });
+    }
+
     private void async(){
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             return " execute supply";
