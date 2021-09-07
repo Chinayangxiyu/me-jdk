@@ -39,3 +39,10 @@
 （4）invokestatic指令：用于调用类静态方法（static方法）。  
 （5）invokedynamic指令：用于在运行时动态解析出调用点限定符所引用的方法。并执行该方法。前面四条调用指令的分派逻辑都固化在Java虚拟机  
 内部，用户无法改变，而invokedynamic指令的分派逻辑是由用户所设定的引导方法决定的
+
+## 数组
+C++数组是简单类型，JVM平台的数组是引用类型。包装为引用类型有一些好处，可以快速的获取数组大小，进行越界检查等。
+因为JVM平台是引用类型，举例 Object[] array = new Object[10];编译时并没有对应的Object[]Java文件，所以
+也没法生成对应的Class字节码。因为类加载器是基于二进制字节码去加载的所以无法使用类加载器去加载数组。
+数组是有虚拟机直接创建。
+[参考](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.3)

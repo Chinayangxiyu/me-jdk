@@ -1,9 +1,19 @@
-# 1¡¢AOP¸ÅÄî£ºÃæÏòÇÐÃæ±à³Ì£¬ÇÐÃæ¡¢Á¬½Óµã¡¢ÇÐÈëµãÊÇºËÐÄ¸ÅÄî¡£
+# Ò»¡¢AOP
+## 1.1¡¢AspectJºÍSpring AOPÇø±ð
+AspectJ ÓÃÓÚ±àÖ¯ÇÐÃæµÄÒ»ÃÅ±à³ÌÓïÑÔ
+[aspectjÎÄµµ](https://www.eclipse.org/aspectj/doc/released/devguide/)
+Spring AOPÊÇ»ùÓÚ´úÀí£¨jdk,CGLIB£©µÄ£¬CGLIBÊÇ×Ö½ÚÂëµ×²ã¼¼ÊõÉú³ÉÒ»¸ö´úÀíÀà£¨Çø±ðAspectJ£¬AspectJÊÇÖ±½ÓÐÞ¸ÄÔ´class£©£»
+
+Spring AOP£º½ö½öÖ§³ÖSpring beanµÄÖ¯Èë£»ÊÊÓÃSpring¡£
+AspectJ£ºÊÇÖ§³ÖÈÎºÎÀà£¬¸ü´ó£¬¹¦ÄÜ¸üÈ«£¬Spring½ÓÈëÁË¶Ô AspectJµÄÖ§³Ö¡£
+
+# ¶þ¡¢AOP»ù´¡
+## 2.1¡¢AOP¸ÅÄî£ºÃæÏòÇÐÃæ±à³Ì£¬ÇÐÃæ¡¢Á¬½Óµã¡¢ÇÐÈëµãÊÇºËÐÄ¸ÅÄî¡£
 ÇÐÃæ£º¿ÉÒÔÊÇ·½·¨¡¢ÊôÐÔ¡£  
 Á¬½Óµã£º³ÌÐòÖ´ÐÐµÄµã£¬±ÈÈç·½·¨Ö´ÐÐÇ°¡¢Òì³£´¦Àí¡¢·½·¨Ö´ÐÐºó¡£  
 ÇÐÈëµã£ºÆ¥ÅäÁ¬½ÓµãµÄËµÃ÷¡£
 
-# 2¡¢Spring AOP
+## 2.2¡¢Spring AOP
 ÃèÊö£ºSpringAOPÊÇJavaÊµÏÖµÄ£¬»ùÓÚIOCÈÝÆ÷×¢²áµÄbeanÊµÏÖµÄÇÐÃæ±à³Ì£¬Ä¿Ç°½öÖ§³Ö·½·¨Ö´ÐÐµÄÁ¬½Óµã¡£Spring AOPËäÈ»Ã»ÓÐÌá¹©È«ÃæµÄAOP½â¾ö·½°¸  
 µ«ÊÇÄÜ½â¾öÎÒÃÇµÄ´ó²¿·ÖÎÊÌâ£¬µ±ÎÒÃÇÐèÒªÍêÕûµÄAOP¿ò¼ÜÊ±£¬¿ÉÒÔ½ÓÈëAspectj¡£
 AOP´úÀí£ºÄ¬ÈÏÊ¹ÓÃ»ùÓÚ½Ó¿ÚµÄJDK£¬»ùÓÚÀà¼Ì³ÐµÄÊ¹ÓÃCGLIB¡£
@@ -11,7 +21,53 @@ DefaultAopProxyFactory.createAopProxy()·½·¨»á¸ù¾ÝproxyTargetClass×´Ì¬¡¢Ä¿±êÀàµÄÀ
 
 Spring AOPÊ¹ÓÃAspectJ 5ÉùÃ÷µÄ×¢½â¡¢ÇÐÈëµã½âÎöºÍÆ¥Åä¡£
 
-# 3¡¢CglibÔöÇ¿
+## 2.3¡¢CglibÔöÇ¿
 ConfigurationClassPostProcessor:Èç¹ûÒ»¸öÀàÊÇ@ConfigurationÅäÖÃÀà£¬»á½øÐÐÔöÇ¿¡£
 ConfigurationClassPostProcessor.postProcessBeanFactory():Ê¹ÓÃcglibÔöÇ¿µÄ×ÓÀàÌæ»»Ä¿±êÀà£»
 
+# Èý¡¢ÊÂÎñ
+## 3.1 ÊÂÎñÔ­Àí
+
+## 3.2¡¢ÊÂÎñÊ§Ð§Ô­Òò·ÖÎö
+[ÒýÓÃ](https://www.jianshu.com/p/4120b89190d0)
+1¡¢beanÃ»ÓÐ±»Spring¹ÜÀí£º  
+&emsp;&emsp;  Ô­Òò·ÖÎö£ºÊÂÎñÊÇ»ùÓÚSpring AOPµÄ£¬Spring AOP½öÊÊÓÃÓÚSpring bean;  
+2¡¢·½·¨²»ÊÇpublicÐÞÊÎ£º  
+&emsp;&emsp;  Ô­Òò·ÖÎö£ºÊÂÎñÊÇ»ùÓÚSpring AOPÊµÏÖµÄ£¬Spring AOPÊÇ»ùÓÚJDKºÍCGLIB¶¯Ì¬´úÀíÊµÏÖµÄ  
+JDK¶¯Ì¬´úÀíÊÇ»ùÓÚ½Ó¿ÚµÄ£¬½Ó¿ÚµÄ·½·¨ÐÞÊÎ·û¿Ï¶¨ÊÇpublicµÄ¡£  
+CGLIB¶¯Ì¬´úÀíÊÇÍ¨¹ý¼Ì³ÐÄ¿±êÀà£¬ÖØÐ´·½·¨£¬Éú³É´úÀíÀà¡£private·½·¨²»ÄÜ±»¼Ì³Ð£»final·½·¨²»ÄÜ±»ÖØÐ´£»×îÖÕ  
+ÔÚÖ´ÐÐ´úÀí·½·¨µÄÊ±ºò£¬²»Ò»¶¨ÔÚÍ¬Ò»¸ö°üÏÂÃæ£¬ËùÒÔÐÞÊÎ·ûÒ²²»ÄÜÊÇdefault£¬¸ü²»»áÊÇprotected¡£Ö»ÄÜÊÇpublic¡£
+
+3¡¢×ÔÉíµ÷ÓÃ£º
+```
+public class A{
+
+    // ·ÖÎö(1)¡¢method1Ã»¼ÓÊÂÎñ£¬Íâ²¿µ÷ÓÃmethod1()µÄÊ±ºòµ÷ÓÃµÄÊÇAÀà±¾ÉíÊµÀý£»
+    // method1ÖÐµ÷ÓÃmethod2£¬Ä¬ÈÏÊ¹ÓÃµÄÊÇthis£»SpringÊÂÎñÊÇ»ùÓÚAOPµÄ£¬ÓÐÊÂÎñ×¢½âµÄ·½·¨
+    // ¶ÔÉú³É¶ÔÓ¦µÄÔöÇ¿´úÀíÀàproxy£¬method1ÖÐµÄthisµ÷ÓÃµÄÊÇAµÄÊµÀý·½·¨£¬²»ÊÇproxy£»ËùÒÔÊÂÎñÊ§Ð§
+    public void method1(){
+        this.method2();
+    }
+    
+    @Transactional
+    public void method2(){
+    }
+    
+    // Í¬·ÖÎö(1)£¬method3ÖÐµ÷ÓÃµÄmethod4Ò²²»ÊÇÔöÇ¿´úÀíÀà£¬ËùÒÔÊÂÎñÊ§Ð§¡£
+    // Èç¹ûÕý³££¬method4ÊÇÒ»¸öÐÂÊÂÎñ£¬»Ø¹ö²Ù×÷²»»áÓ°Ïìmethod3£»µ«ÊÇÊµ¼ÊÓ°Ïìµ½ÁËmethod3()ËùÒÔÊ§Ð§¡£
+    // Èç¹ûÊ¹ÓÃµÄÊÇÄ¬ÈÏµÄÊÂÎñ´«²¥»úÖÆ£¬ÄÇÃ´´Ë¿Ìmethod4ÊÇ·ñ¼ÓÊÂÎñ¶¼ÄÜÉúÐ§£¬ÒòÎªÕû¸öÖ´ÐÐÂß¼­¶¼°üº¬ÔÚÁË
+    // method3ÉùÃ÷µÄÊÂÎñÀïÃæ¡£
+    @Transactional
+    public void method3(){
+        this.method4();
+    }
+    
+    @Transactional( propagation = Propagation.REQUIRES_NEW)
+    public void method4(){
+    }
+}
+```
+¡¾×¢Òâ¡¿£ºSpringÊÂÎñÄ¬ÈÏµÄ´«²¥»úÖÆÊÇÓÐÊÂÎñ¼ÓÈë£¬Ã»ÓÐÊÂÎñÐÂ½¨£»ËùÒÔÆ½Ê±ÔÚÊ¹ÓÃµÄÊ±ºòÀàËÆ·½·¨method4()µÄµ÷ÓÃ
+¿ÉÒÔ²»Ö¸¶¨ÊÂÎñ´«²¥»úÖÆ£¬µ÷ÓÃmethod4()Èç¹û
+4¡¢·½·¨ÊÇfinalÐÞÊÎµÄ£ºfinalÐÞÊÎµÄ·½·¨²»ÄÜ±»ÖØÐ´£¬¶øµ±Ç°·½·¨Èç¹ûÊÇfinalÐÞÊÎµÄ£¬¿Ï¶¨·½·¨ÒÑ¾­ÊµÏÖÁË£»AOP¿Ï¶¨ÊÇ»ùÓÚCGLIBÍê³ÉµÄ£¬
+CGLIB´úÀíÔöÇ¿ÀàÊÇÈ¥¼Ì³ÐÄ¿±êÀà£¬ÖØÐ´·½·¨¡£

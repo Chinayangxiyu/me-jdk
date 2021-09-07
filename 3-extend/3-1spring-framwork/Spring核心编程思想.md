@@ -84,4 +84,24 @@ BeanFactoryPostProcessor£ºbeanFactory¹³×Ó£¬ÔÊĞí×Ô¶¨ÒåĞŞ¸ÄÓ¦ÓÃ³ÌĞòÉÏÏÂÎÄµÄbean¶¨Ò
 
 
 AutowireCapableBeanFactory:¾ßÓĞ×Ô¶¯×°ÅäÄÜÁ¦µÄBeanFactory
-SingletonBeanRegistry:×¢²áÒ»Ğ©¹«ÓÃµÄµ¥Àıbean£¬ÕâĞ©bean£»±ÈÈç
+SingletonBeanRegistry:×¢²áÒ»Ğ©¹«ÓÃµÄµ¥Àıbean£¬ÕâĞ©bean£»
+
+# 1¡¢ÀàĞÍ×ª»»µ×²ãºËĞÄÀà
+Converter:µ¥ÀàĞÍ×ª»»Æ÷
+GenericConverter:Í¨ÓÃµÄ¡¢Áé»îµÄ¡¢¶àÀàĞÍ×ª»»Æ÷£¨ÊµÏÖ¸´ÔÓ£©¡£
+ConditionalConverter:×ª»»Æ÷µÄÀàĞÍÆ¥Åä¡£
+ConversionService:ÊÇÀàĞÍ×ª»»ÏµÍ³µÄÈë¿Ú£¬Ğ­µ÷¸÷¸ö×ª»»Æ÷µÄµ÷ÓÃ.
+ConverterRegistry:×ª»»Æ÷×¢²áÆ÷£¬Ò»°ãºÍConversionService×éºÏÊ¹ÓÃ¡£
+
+Êµ¼Ê³¡¾°ÖĞConverterºÍGenericConverter¿ÉÒÔ»¥Ïàµ÷ÓÃ£¬  
+±ÈÈçUserÓĞÒ»¸öÊôĞÔ companys List<Company>,ĞèÒªGenericConverterÈ¥×ª»»£»
+ÄÚ²¿ÔªËØCompany ĞèÒªConverterÈ¥×ª»»£¬ÒÀ´Îµİ¹é,Ö±µ½×ª»»Îª¼òµ¥ÀàĞÍ¡£
+
+# 2¡¢ÀàĞÍ×ª»»Æ÷
+TypeConverter:¶¨Òå×ª»»·½·¨µÄ½Ó¿Ú£¬ÏòÍâÌá¹©ÀàĞÍ×ª»»¹¦ÄÜ¡£
+TypeConverterSupport:TypeConverterµÄ³éÏóÊµÏÖ£¬Ö÷ÒªÓÃ×÷BeanWrapperImplµÄ»ùÀà¡£
+TypeConverterDelegate:ÀàĞÍ×ª»»µÄÎ¯ÍĞÀà£¨¹¤¾ßÀà£©£¬ÄÚ²¿Ê¹ÓÃconversionService£¨µ×²ãÀàĞÍ×ª»»Æ÷£©ºÍPropertyEditor£¨ÊôĞÔ±à¼­Æ÷£©  
+ÊµÏÖ¶ÔJavabeanµÄ²Ù×÷¡£
+
+**BeanWrapperImpl£¬×îÖÕ¾ÍÊÇÍ¨¹ıTypeConverterDelegateÊµÏÖÊôĞÔµÄ½âÎö¡¢Ìî³ä¡¢×ª»»¡£ÏêÇéÇë¼ûÊôĞÔÌî³ä  
+AbstractAutowireCapableBeanFactory.applyPropertyValues()**

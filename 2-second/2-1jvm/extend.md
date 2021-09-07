@@ -47,17 +47,23 @@ SPI是给的接口规范，需要使用方自己实现。
 https://blog.csdn.net/u010430304/article/details/54601302/
 
 
-# 4、字节码技术
-1、ASM
-CGLIB底层使用的是ASM
+# 4、字节码编织技术
+1、ASM  CGLIB底层使用的是ASM
 2、javassist
 3、Aspectj  
 （AOP思想的落地实现，是一门语言，有自己的语法，可以生成class字节码）
-https://blog.csdn.net/zhao9tian/article/details/37762389
-[百度百科](https://baike.baidu.com/item/Aspectj/4830848?fr=aladdin)
-
+[aspectj文档](https://www.eclipse.org/aspectj/doc/released/devguide/)
 ASM更快、性能更高；javassist更简单
+## 编织的节点
+（1）编织方式：字节码编织可以在编译前、编译后、加载时、运行时去编织代码；
+（2）加载时编织（load-time weaving），Java的load-time weaving使用到了java agent技术。
 
+AspectJ支持在编译前、编译后、加载时去编织代码。
+[参考](https://www.eclipse.org/aspectj/doc/released/devguide/ltw.html)
+ASM侧重于性能，支持在编译阶段使用，加载时、运行时
+[参考](https://asm.ow2.io/developer-guide.html)
+javassist，Java 字节码的类库
+[参考](http://www.javassist.org/tutorial/tutorial.html)
 
 # 5、MethodHandle（方法句柄）
 什么是MethodHandle：模拟字节码的方法指令调用；可以实现将方法作为参数进行传递；提供了类似Java反射的"反射"操作。
@@ -112,3 +118,6 @@ class Person{
 # 6、虚方法、非虚方法(涉及方法分派)
 类加载能直接将方法的符号引用替换为直接引用的方法称为"非虚方法"，包括static,private,super,final修饰的方法和构造器方法。  
 其他方法为虚方法。
+
+# 7、动态代理
+动态代理是基于反射实现的
